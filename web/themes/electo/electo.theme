@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Electo theme.
+ */
+
+// Alter search box to use font-awesome seach icon.
+function electo_form_search_block_form_alter(&$form, &$form_state) {
+    $form['keys']['#attributes']['placeholder'][] = t('Search');
+    $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    $form['actions']['submit']['#attributes']['class'][] = 'fas fa-search';
+    $form['actions']['submit']['#attributes']['title'][] = t('Search');
+}

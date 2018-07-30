@@ -1,0 +1,17 @@
+name: Electo
+type: theme
+description: 'Base theme for Electo'
+core: 8.x
+base theme: classy
+
+libraries:
+  - electo/global
+  - electo/font-awesome
+  - electo/google-font
+
+regions:
+  header: Header
+  notice: Notice
+  content: Content
+  footer: Footer
+

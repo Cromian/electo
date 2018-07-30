@@ -1,0 +1,21 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+
+google-font:
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Lato:900|Merriweather:300,300i,900: { type: external, minified: true }
+
+font-awesome:
+  remote: https://fontawesome.com/
+  version: 5.2.0
+  license:
+    name: MIT
+    url: https://fontawesome.com/license
+    gpl-compatible: true
+  css:
+    theme:
+      https://use.fontawesome.com/releases/v5.2.0/css/all.css: { type: external, minified: true }
