@@ -1,0 +1,60 @@
+@import 'scaffold-css/scaffold.scss';
+
+$grey: #f2f2f2;
+$purple: #8b90f2;
+$teal: #00cde3;
+
+$black-border: 10px solid black;
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+h3 {
+    background-color: $purple;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    padding: 3%;
+
+    -moz-box-decoration-break:clone; 
+    -webkit-box-decoration-break:clone;
+    box-decoration-break:clone;
+
+    a {
+        color: white;
+    }
+}
+
+.col {
+    @media screen and (min-width: $medium-break) {
+        max-width: 24%;
+    }
+    flex-basis: auto; /* default value */
+    flex-grow: 1;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 1%;
+  
+    border: $black-border;
+    // padding: 1%;
+
+    .inner {
+        height: 92%;
+        border-bottom: 10px solid $grey;
+        border-right: 10px solid $grey;
+        padding: 4%;
+
+        // margin-left: -4%;
+        // padding-left: 4%;
+        // padding-right: 4%;
+        // margin-top: -4%;
+        // padding-top: 4%;
+    }
+}
+
+

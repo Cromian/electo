@@ -1,6 +1,11 @@
+// Variables
+$base-font: 19px;
+$ratio: 1.618;
+$max-width: 1200px;
+
 // Individual card scss
-@import 'text';
 @import 'breakpoints';
+@import 'text';
 @import 'grid';
 @import 'input';
 @import 'misc';
