@@ -1,0 +1,39 @@
+@mixin italic-font {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+}
+
+@mixin heading-font {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+@mixin purple-heading {
+    padding: 2px 0; 
+    
+    span {
+        color: white;
+        background-color: $purple;
+        font-family: 'Merriweather', serif;
+        font-weight: 900;
+        display: inline;
+        padding: .3rem;
+        line-height: 1.8em;
+
+        @media screen and (max-width: $medium-break) {
+            line-height: 2em;
+        }
+
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+    }
+}
+
+@mixin input {
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom: 8px solid $grey;
+    padding-bottom: 5px;
+    margin-right: .5%;
+}

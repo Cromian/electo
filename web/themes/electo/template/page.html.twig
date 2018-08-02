@@ -1,10 +1,18 @@
+{% include directory ~ '/template/about.html.twig' %}
+
 <div class="container">
+    
     <header>
-        {{ page.header }}
-        {{ page.notice}}
+        <div id="menu"><i class="fas fa-bars"></i></div>
+        <div id="h-2">
+            <a href="{{ url('view.frontpage.page_1') }}" class="logo" title="Home"></a>
+            <div class="tagline">A publication of election news</div>
+        </div>
+        <div id="h-3">{{ page.header }}</div>
     </header>
 
     <main>
+        {{ page.notice}}
         {{ page.content}}
     </main>
 

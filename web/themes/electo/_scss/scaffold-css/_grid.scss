@@ -1,44 +1,6 @@
 // Grid Logic
 
-.container {
-  // max-width: $max-width;
-  margin: auto;
-  word-wrap: break-word;
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.col {
-  // display: flex;
-  align-items: center;
-  flex-basis: 100%;
-  @media screen and (min-width: $medium-break) {
-      flex: 1;
-  }
-}
-
-// .Aligner-item--top {
-//   align-self: flex-start;
-// }
-
-// .Aligner-item--bottom {
-//   align-self: flex-end;
-// }
-
-
-// @mixin center-center {
-//   align-items: center;
-//   justify-content: center;
-// }
-
 // .container {
-//   max-width: $max-width;
 //   margin: auto;
 //   word-wrap: break-word;
 // }
@@ -48,42 +10,12 @@
 //   flex-direction: row;
 //   flex-wrap: wrap;
 // }
-  
+
 // .col {
+//   align-items: center;
 //   flex-basis: 100%;
-
 //   @media screen and (min-width: $medium-break) {
-//     flex: 1;
-  
+//       flex: 1;
 //   }
 // }
-
-// // Col specifics
-// ._25 {
-//   flex: .25;
-
-//   @media screen and (max-width: $medium-break) {
-//     flex: 1;
-//   }
-
-// }
-
-// ._35 {
-//   flex: .35;
-
-//   @media screen and (max-width: $medium-break) {
-//     flex: 1;
-//   }
-
-// }
-
-// ._75 {
-//   flex: .75;
-
-//   @media screen and (max-width: $medium-break) {
-//     flex: 1;
-//   }
-
-// }
-
 
