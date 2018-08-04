@@ -8,7 +8,10 @@
 // Alter search box to use font-awesome seach icon.
 function electo_form_search_block_form_alter(&$form, &$form_state) {
     $form['keys']['#attributes']['placeholder'][] = t('Search');
+    $form['keys']['#attributes']['id'][] = 'shitfuckfuck';
+
     $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
     $form['actions']['submit']['#attributes']['class'][] = 'fas fa-search';
     $form['actions']['submit']['#attributes']['title'][] = t('Search');
+
 }

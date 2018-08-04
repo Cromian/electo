@@ -3,6 +3,10 @@ global:
   css:
     theme:
       css/style.css: {}
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
 
 google-font:
   css:
@@ -19,3 +23,5 @@ font-awesome:
   css:
     theme:
       https://use.fontawesome.com/releases/v5.2.0/css/all.css: { type: external, minified: true }
+
+

@@ -1,11 +1,10 @@
 @import 'scaffold-css/scaffold.scss';
-
 @import '_vars';
 @import '_mixins';
 
 body {
     @include italic-font;
-    border-top: 10px solid $purple;
+    border-top: $top-border;
     padding-top: 1em;
 }
 
@@ -74,29 +73,26 @@ header {
     }
 }
 
-#h-3 {
-    text-align: right;
-}
-
 .logo {
     @include image-block('../logo.svg');
     height: 120px;
     width: 280px;
 }
 
-#menu {
-    border: 6px solid black;
-    border-radius: 100%;
-    height: 2.6em;
-    width: 2.6em;
-    line-height: 2.7em;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
+.btn {
+    @include heading-font;
+    border: 7px solid black;
+    display: block;
+    color: black;
+    padding: 2%;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 250px;
 
     &:hover {
         border-color: $teal;
         color: $teal;
+        text-decoration: none;
     }
 }
 
@@ -108,12 +104,17 @@ header {
         column-count: 1;
     }
     column-count: 3;
-    column-gap: 2em;
+    column-gap: 3em;
+    margin-top: 1.8em;
+
+    .view-content {
+        max-height: 2500px;
+    }
 }
 
 .box {
     display: inline-block;
-    margin: 0 0 2em;
+    margin: 0 0 2.5em;
     width: 95%;
     @media screen and (max-width: $medium-break) {
         width: 90%;
@@ -160,7 +161,6 @@ header {
             background-color: white;
             color: black;
             transition: $transition
-
         }
 
         a {
@@ -174,32 +174,76 @@ header {
     }
 }
 
-.about-well {
+.about-section {
     display: grid;
-    grid-template-columns: .5fr 2fr;
+    grid-template-columns: 1fr 3fr;
     background-color: rgba(0, 0, 0, 0.80);
     height: 100vh;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     color: white;
 
-    div {
+    .about-content {
+        margin-top: 15vh;
         padding: 2%;
     }
 
+    .cta-rtv {
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+
     .col {
+        @include dropshadow;
+        border-top: $top-border;
         background-color: white;
         color: black;
         padding: 5%;
-        -webkit-box-shadow: 4px 0px 7px 4px rgba(0,0,0,0.65);
-        -moz-box-shadow: 4px 0px 7px 4px rgba(0,0,0,0.65);
-        box-shadow: 4px 0px 7px 4px rgba(0,0,0,0.65);
-
-        h2:after {
-            border-color: black;
-        }
-
-
+        
     }
+}
+
+// One offs
+#menu {
+    border: .25em solid black;
+    border-radius: 100%;
+    height: 2.6em;
+    width: 2.6em;
+    line-height: 2.7em;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $teal;
+        color: $teal;
+    }
+}
+
+.search-page .view-filters {
+    display: none;
+}
+
+#about {
+    display: none;
+}
+
+#close {
+    @include heading-font;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+
+    &:hover {
+        color: $teal;
+    }
+}
+
+#h-3 {
+    text-align: right;
 }

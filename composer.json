@@ -23,6 +23,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
         "drupal/feeds": "^3.0",
+        "drupal/search_api": "^1.9",
         "drupal/views_infinite_scroll": "^1.5",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
