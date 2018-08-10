@@ -17,7 +17,7 @@
 #content {
     @include dropshadow;
     border-top: $top-border;
-    max-height: 100vh;
+    max-height: 99vh;
     overflow-y: scroll;
     width: 80%;
     margin: auto;
