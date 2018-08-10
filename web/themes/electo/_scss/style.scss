@@ -1,6 +1,7 @@
 @import 'scaffold-css/scaffold.scss';
 @import '_vars';
 @import '_mixins';
+@import '_components';
 
 body {
     @include italic-font;
@@ -169,7 +170,6 @@ header {
                 text-decoration: none;
             }
         }
-
         transition: $transition
     }
 }
@@ -177,12 +177,7 @@ header {
 .about-section {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    background-color: rgba(0, 0, 0, 0.80);
     height: 100vh;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    color: white;
 
     .about-content {
         margin-top: 15vh;
@@ -205,45 +200,14 @@ header {
     }
 }
 
-// One offs
-#menu {
-    border: .25em solid black;
-    border-radius: 100%;
-    height: 2.6em;
-    width: 2.6em;
-    line-height: 2.7em;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-
-    &:hover {
-        border-color: $teal;
-        color: $teal;
-    }
-}
-
 .search-page .view-filters {
     display: none;
 }
 
-#about {
+.overlay-bg {
     display: none;
-}
-
-#close {
-    @include heading-font;
-    position: fixed;
+    background-color: rgba(0, 0, 0, 0.80);
+    color: white;
+    position: absolute;
     top: 0;
-    right: 0;
-    padding: 1em;
-    font-size: 1.5em;
-    cursor: pointer;
-
-    &:hover {
-        color: $teal;
-    }
-}
-
-#h-3 {
-    text-align: right;
 }

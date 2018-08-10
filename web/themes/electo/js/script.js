@@ -2,10 +2,21 @@
 (function ($, jQuery) {
     $(document).ready(function () {
         $( "#menu" ).click(function() {
+            $("#content").hide();
             $("#about").show();
+            $(".overlay-bg").show();
         });
+
+        $( ".ajax-link" ).on('click', function() {
+            $(".overlay-bg").show();
+            $("#content").show();
+            $("#about").hide();
+        });
+
         $( "#close" ).click(function() {
             $("#about").hide();
+            $("#content").hide();
+            $(".overlay-bg").hide();
         });
     });
 })(jQuery);
