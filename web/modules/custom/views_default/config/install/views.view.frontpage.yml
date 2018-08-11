@@ -316,6 +316,9 @@ display:
     display_options:
       display_extenders: {  }
       path: node
+      title: 'Latest Headlines poop'
+      defaults:
+        title: false
     cache_metadata:
       max-age: -1
       contexts:
