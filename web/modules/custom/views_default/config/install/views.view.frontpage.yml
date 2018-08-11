@@ -316,7 +316,7 @@ display:
     display_options:
       display_extenders: {  }
       path: node
-      title: 'Latest Headlines poop'
+      title: 'Latest Headlines'
       defaults:
         title: false
     cache_metadata:

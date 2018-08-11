@@ -24,3 +24,9 @@
 // Get values
 var searchTerm = document.getElementById('edit-keys').value;
 document.getElementById('search-term-key').innerHTML = ": " + searchTerm; 
+
+
+// Footer Dates
+var d = new Date();
+var n = d.getFullYear();
+document.getElementById("ft-date").innerHTML = n;
