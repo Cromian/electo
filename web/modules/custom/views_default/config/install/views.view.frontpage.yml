@@ -3,7 +3,9 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - field.storage.node.field_link
   module:
+    - link
     - node
     - search
     - text
@@ -69,7 +71,7 @@ display:
             offset_label: Offset
           views_infinite_scroll:
             button_text: 'Load More'
-            automatically_load_content: true
+            automatically_load_content: false
       style:
         type: default
       row:
@@ -198,6 +200,73 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        field_link:
+          id: field_link
+          table: node__field_link
+          field: field_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: null
+            url_only: true
+            url_plain: true
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         body:
           id: body
           table: node__body
@@ -209,7 +278,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="{{ view_node }}" class="ajax-link" rel="#content"><h3><span>{{ title }}</span></h3><div class="description">{{ body }}</div></a>'
+            text: '<a href="{{ field_link }}" target="_blank"><h3><span>{{ title }}</span></h3><div class="description">{{ body }}</div></a>'
             make_link: false
             path: ''
             absolute: false
@@ -308,6 +377,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_link'
   page_1:
     display_plugin: page
     id: page_1
@@ -329,6 +399,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_link'
   page_2:
     display_plugin: page
     id: page_2
@@ -427,3 +498,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_link'

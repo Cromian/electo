@@ -3,6 +3,7 @@ description: 'Default export of views.'
 type: module
 core: 8.x
 dependencies:
+  - link
   - node
   - search
   - text
