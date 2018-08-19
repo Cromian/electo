@@ -1,14 +1,29 @@
+
+<div class="overlay-bg">
+<div id="close">X</div>
+{% include directory ~ '/template/about.html.twig' %}
+{% include directory ~ '/template/content.html.twig' %}
+
+</div>
+
 <div class="container">
+    
     <header>
-        {{ page.header }}
-        {{ page.notice}}
+        <div id="menu"><i class="fas fa-bars"></i></div>
+        <div id="h-2">
+            <a href="{{ url('view.frontpage.page_1') }}" class="logo" title="Home"></a>
+            <div class="tagline">A publication of election news</div>
+        </div>
+        <div id="h-3">{{ page.header }}</div>
     </header>
 
     <main>
+        {{ page.notice}}
         {{ page.content}}
     </main>
 
     <footer>
         {{ page.footer}}
+        <div class="legal">©<span id="ft-date"></span> <a href="https://mishavinokur.com" target="_blank">Misha Vinokur</a></div>
     </footer>
 </div>
