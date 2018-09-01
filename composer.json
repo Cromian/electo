@@ -27,6 +27,7 @@
         "drupal/feeds": "^3.0",
         "drupal/metatag": "^1.5",
         "drupal/search_api": "^1.9",
+        "drupal/social_post_twitter": "^2.0",
         "drupal/views_infinite_scroll": "^1.5",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
