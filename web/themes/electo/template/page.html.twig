@@ -3,19 +3,17 @@
 <div id="close">X</div>
 {% include directory ~ '/template/about.html.twig' %}
 {% include directory ~ '/template/content.html.twig' %}
-
 </div>
 
 <div class="container">
-    
+    {# <div id="h-3">{{ page.header }}</div> #}
     <header>
-    
-        <div id="menu"><i class="fas fa-bars"></i></div>
+        <a href="{{ url('<front>') }}" class="logo" title="Home"></a>
+        <div class="tagline">A publication of election related news</div>
+        {# <div id="menu"><i class="fas fa-bars"></i></div>
         <div id="h-2">
-            <a href="{{ url('<front>') }}" class="logo" title="Home"></a>
-            <div class="tagline">A publication of election related news</div>
         </div>
-        <div id="h-3">{{ page.header }}</div>
+         #}
     </header>
 
     <main>
@@ -24,10 +22,13 @@
     </main>
 
 </div>
+
 <footer>
     <div class="footer-border">
         {{ page.footer}}
-        <a href="https://twitter.com/electonews"><i class="fab fa-twitter"></i></a>
+        <a href="https://twitter.com/electonews"><i class="fab fa-twitter"></i></a> 
+        <a href="mailto:info@electonews.com"><i class="fas fa-envelope"></i></a>
+
         <div class="legal">©<span id="ft-date"></span> <a href="https://mishavinokur.com" target="_blank">Misha Vinokur</a></div>
     </div>
 </footer>
